@@ -1,0 +1,59 @@
+// *{
+
+//     border: 1px solid lightgray;
+// }
+.mat-card {
+
+    width: 400px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+#logonav{
+    height: 220px;
+    width: auto;
+}
+
+
+p {
+    color: gray;
+    display: flex;
+    margin-left: 20px;
+}
+
+strong {
+    margin-right: 7px;
+}
+
+.mat-icon {
+    color: rgb(7, 72, 185);
+    margin-right: 7.5px;
+    font-size: 18px;
+}
+
+.mat-card-header {
+    background-color: rgb(255, 0, 140);
+    padding: 10px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.del {
+    margin-left: 150px;
+}
+
+.open {
+    margin-left: 17px;
+
+}
+
+footer {
+    background-color: #3f51b5;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}

@@ -1,0 +1,44 @@
+<mat-toolbar color="primary">
+    <a href=""><img id="logonav" src="/assets/logo-02.png" alt="logonav"></a>
+    <a mat-button routerLink="/">Inicio</a>
+    <a mat-button routerLink="/products-charts">Gráficas</a>
+    <a mat-button routerLink="/products">Productos</a>
+    <a mat-button routerLink="/new-product">Nuevo Producto</a>
+</mat-toolbar>
+
+<mat-card>
+    <mat-card-title>Editar Producto</mat-card-title>
+    <mat-card-content>
+        <form (submit)="updateProduct()">
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input matInput type="text" name="name" [(ngModel)]="product.name">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Unidades</mat-label>
+                <input matInput type="text" name="stock" [(ngModel)]="product.stock">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Precio/Unidad</mat-label>
+                <input matInput type="text" name="price" [(ngModel)]="product.price">
+            </mat-form-field>
+
+            <div class="stock">Disponibilidad :
+                <mat-checkbox name= "active"[(ngModel)]="product.active">En Stock</mat-checkbox>
+            </div>
+
+
+            <mat-form-field appearance="outline">
+                <mat-label>Fecha de Alta</mat-label>
+                <input matInput type="date" name="date_added" [(ngModel)]="product.date_added">
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" type="submit">Guardar Cambios</button>
+        </form>
+    </mat-card-content>
+</mat-card>
+<footer>
+    <p>Derechos de Autor &copy; 2023 Ultramarinos DUAL. Todos los derechos reservados.</p>
+</footer>

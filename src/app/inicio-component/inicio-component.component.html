@@ -1,0 +1,87 @@
+<mat-toolbar color="primary">
+    <a href=""><img id="logonav" src="/assets/logo-02.png" alt="logonav"></a>
+    <a mat-button routerLink="/">Inicio</a>
+    <a mat-button routerLink="/products-charts">Gráficas</a>
+    <a mat-button routerLink="/products">Productos</a>
+
+</mat-toolbar>
+
+<body>
+    <section class="head">
+        <div class="login" style="float:right">
+            <img style="float:right" id="logofondo" src="/assets/logo_fondo.png" alt="logofondo">
+        </div>
+        <form>
+            <mat-form-field appearance="outline">
+                <mat-label>Usuario</mat-label>
+                <input matInput type="text">
+                <mat-icon matSuffix>account_circle</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Contraseña</mat-label>
+                <input matInput>
+                <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+            <button mat-raised-button color="accent" type="submit">LogIn</button>
+        </form>
+
+
+    </section>
+    <section class="mejorpvp">
+        <div>
+            <h1 style="font-family:Georgia, 'Times New Roman', Times, serif; color: gray;">Tu cesta de la compra al
+                mejor precio</h1>
+            <img style="float:right" id="cesta" src="/assets/cesto.jpeg" alt="cesta_compra">
+        </div>
+    </section>
+    <section class="card">
+        <mat-card>
+            <mat-card-title>Regístrate</mat-card-title>
+            <mat-card-content>
+                <form>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>account_circle</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Apellidos</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>account_circle</mat-icon>
+                        <mat-hint>Primer apellido, segundo apellido</mat-hint>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Dirección</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>home</mat-icon>
+                        <mat-hint>Calle, número, piso, puerta</mat-hint>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Localidad</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>location_city</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Código Postal</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>local_post_office</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Provincia</mat-label>
+                        <mat-select>
+                            <mat-option value="one">A Coruña</mat-option>
+                            <mat-option value="two">Lugo</mat-option>
+                            <mat-option value="three">Ourense</mat-option>
+                            <mat-option value="four">Pontevedra</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </section>
+
+    <footer>
+        <p>Derechos de Autor &copy; 2023 Ultramarinos Dual TIC. Todos los derechos reservados.</p>
+    </footer>
+
+</body>

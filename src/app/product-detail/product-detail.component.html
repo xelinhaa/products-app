@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+    <a href=""><img id="logonav" src="/assets/logo-02.png" alt="logonav"></a>
+    <a mat-button routerLink="/">Inicio</a>
+    <a mat-button routerLink="/products-charts">Gráficas</a>
+    <a mat-button routerLink="/products">Productos</a>
+    <a mat-button routerLink="/new-product">Nuevo Producto</a>
+</mat-toolbar>
+<mat-card>
+    <mat-card-content class="card">
+        <mat-card-header><strong style="margin-right: 30px;">INFORMACIÓN DE PRODUCTO</strong></mat-card-header>
+
+        <p><mat-icon>description</mat-icon> <strong>Nombre:</strong> {{product.name}}</p>
+        <p><mat-icon>inventory</mat-icon> <strong>Unidades:</strong>{{product.stock}}</p>
+        <p><mat-icon>euro</mat-icon> <strong>Precio/Unidad:</strong>{{product.price}}</p>
+        <p><mat-icon>check_box</mat-icon><strong>Disponibilidad:</strong>{{product.active? 'En Stock':'No Disponible'}}</p>
+        <p><mat-icon>history</mat-icon><strong>Fecha de Alta:</strong>{{product.date_added | date:'dd/MM/yyyy'}}</p>
+
+    </mat-card-content>
+    <mat-card-actions>
+        <button class="del" mat-icon-button color="primary" (click)="goToUpdateProduct()">
+            <mat-icon style="font-size: xx-large; margin-left: 13px; margin-top: 25px;">update</mat-icon>
+        </button>
+        <button class="open" mat-icon-button color="primary" (click)="openConfirmationDialog(product.id)">
+            <mat-icon style="font-size: xx-large; margin-left: 13px; margin-top: 25px;">delete</mat-icon>
+        </button>
+     
+     
+        <p> <span style="margin-left: 130px;font-size: small;">Actualizar</span>
+            <span style="margin-left: 10px;font-size: small;">Borrar</span>
+        </p>
+    </mat-card-actions>
+</mat-card>
+<footer>
+    <p>Derechos de Autor &copy; 2023 Ultramarinos DUAL. Todos los derechos reservados.</p>
+</footer>

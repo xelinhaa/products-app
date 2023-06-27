@@ -1,0 +1,43 @@
+<mat-toolbar color="primary">
+    <a href=""><img id="logonav" src="/assets/logo-02.png" alt="logonav"></a>
+    <a mat-button routerLink="/">Inicio</a>
+    <a mat-button routerLink="/products-charts">Gráficas</a>
+    <a mat-button routerLink="/products">Productos</a>
+    
+</mat-toolbar>
+<mat-card class="card1">
+    <mat-card-title class="title">Gráficas de Productos</mat-card-title>
+    <mat-card-content>
+        <h3>Productos en Stock</h3>
+        <div class="row"> 
+            <ngx-charts-bar-vertical [scheme]="colorScheme" [view]="[800,300]" 
+            [results]="stockProducts" [xAxisLabel]="Productos" [xAxis]="true" 
+            [showXAxisLabel]="true" >
+            </ngx-charts-bar-vertical>
+        </div>
+        <h3>Precios €</h3>
+        <div class="row">
+            <ngx-charts-bar-vertical [scheme]="colorScheme" [view]="[800,300]" 
+            [results]="priceProducts" [xAxisLabel]="Productos" [xAxis]="true" 
+             [showXAxisLabel]="true" >
+            </ngx-charts-bar-vertical>
+        </div>
+        <h3>Clasificación por precios €</h3>
+        <div class="row">
+            <ngx-charts-bar-vertical [scheme]="colorScheme" [view]="[800,300]" 
+            [results]="precios5" [xAxisLabel]="Productos" [xAxis]="true" 
+             [showXAxisLabel]="true" >
+            </ngx-charts-bar-vertical>
+        </div>
+        <h3>Unidades de Stock</h3>
+        <div class="row">
+            <ngx-charts-bar-vertical [scheme]="colorScheme" [view]="[800,300]" 
+            [results]="stockVolume" [xAxisLabel]="Productos" [xAxis]="true" 
+             [showXAxisLabel]="true" >
+            </ngx-charts-bar-vertical>
+        </div>
+     
+        
+    </mat-card-content>
+</mat-card>
+
